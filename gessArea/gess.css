@@ -233,7 +233,21 @@ background-color: #080a0a;
     background: none;
     border: none;
 }
+.stg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 100;
 
+
+}
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     .my-game {

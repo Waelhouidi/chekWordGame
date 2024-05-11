@@ -196,7 +196,15 @@ function handleBackspace(event) {
 }
 
 // Event listener for backspace key
-document.addEventListener('keydown', handleBackspace);
+const menuBtn = document.querySelector("#settings-btn"); // Corrected the class name
+menuBtn.addEventListener("click", () => {
+    document.querySelector("#stg-ing").style.display = "block";
+});
+// Event listener for the close button
+const closeBtn = document.querySelector("#close-btn");
+closeBtn.addEventListener("click", () => {
+    document.querySelector("#stg-ing").style.display = "none";
+});
 
 // Run the game when the window loads
 window.onload = function () {

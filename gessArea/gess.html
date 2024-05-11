@@ -14,6 +14,30 @@
     <header class="header">
             <h1> </h1>
             <button id="settings-btn">            <i class="fas fa-cog"></i>         </button>
+            <div class="stg" id="stg-ing" style="display: none;">
+                <button id="close-btn">X</button> <!-- Close button -->
+                <h5>Choose language :</h5>
+                <select name="" id="language-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </select>
+                <h1>Rules of the game :</h1>
+                <h3>Game play  :</h3>
+  <ol>
+    <li>The player has 6 attempts to guess the hidden word</li>
+    <li>On each attempt, the player enters a letter in the grid to form a word</li>
+    <li>After each attempt, the game indicates the correct letters placed in the right position, the correct letters placed in the wrong position, and the incorrect letters</li>
+  </ol>
+  <h3>End of Game:</h3>
+  <ol>
+    <li>The game ends when the player correctly guesses the word or when they have used all 6 attempts without success</li>
+    <li>Upon success, the game displays a victory message.</li>
+    <li>Upon failure, the game displays the correct word.</li>
+  </ol>
+            </div>
+            
+
+
             <button id="voiceInputButton">            <i class="fa-solid fa-microphone"></i>        </button> 
     </header>
     <div class="my-game">
@@ -50,12 +74,10 @@
                   </div>
                 </div>
               
-                <select id="language-select">
-                  <option value="en">English</option>
-                  <option value="fr">French</option>
-              </select>
+        
 
       </div>
+      
       <footer></footer>
      <script src="gess.js"></script>
 </body>
