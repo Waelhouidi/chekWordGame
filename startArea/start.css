@@ -47,11 +47,18 @@ h1 {
 }
 
 img {
-    width: 100%; /* Set images to fill their containers */
+    width: 300px; /* Set images to fill their containers */
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s ease; /* Added transition for smooth animation */
 }
 
 img:hover {
     transform: scale(1.1); /* Scale up the image slightly on hover */
+}
+@media only screen and (max-width: 768px)  {
+    img {
+        width: 100%; /* Set images to fill their containers */
+        height: auto; /* Maintain aspect ratio */
+        transition: transform 0.3s ease; /* Added transition for smooth animation */
+    }
 }
