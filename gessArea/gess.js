@@ -205,6 +205,11 @@ const closeBtn = document.querySelector("#close-btn");
 closeBtn.addEventListener("click", () => {
     document.querySelector("#stg-ing").style.display = "none";
 });
+//restart button
+const restartBtn = document.querySelector(".restart");
+restartBtn.addEventListener('click',()=>{
+    window.location.reload();
+});
 
 // Run the game when the window loads
 window.onload = function () {
