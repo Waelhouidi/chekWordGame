@@ -11,7 +11,7 @@ let wordToGuess=words[Math.floor(Math.random()*words.length)].toLowerCase();
 //for testing in validet exam
 console.log(wordToGuess);
 //Game area settings
-let numbersOftry=5;
+let numbersOftry=6;
 let numberOfinput=5;
 let  tryCount=1;
 let numberOfHints=2;
@@ -85,6 +85,9 @@ function handelGeusses(){
     handlButton.disabled=true;
     handlButton.classList.add("disabled-button"); 
     getHintButton.classList.add('disabled-button');
+document.querySelector("#winWrapper header").innerHTML = "Congratulations!";
+document.querySelector("#winWrapper h2").innerHTML = "You win! The word is " + wordToGuess;
+document.getElementById('winWrapper').style.display = 'block';
 
     
     
@@ -105,7 +108,7 @@ function handelGeusses(){
 
         }else{
             handlButton.disabled=true;
-            message.innerHTML='you lost';
+            message.innerHTML=`You Lose  the word is ${wordToGuess}`;
             handlButton.classList.add("disabled-button"); 
 
         }
@@ -175,6 +178,7 @@ function handleBackspace(event) {
         }
     }
 }
+
 window.onload=function(){
     generateInput();
  }
