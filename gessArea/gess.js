@@ -120,6 +120,11 @@ const handleGuesses = () => {
 
 // Event listener for checking the word
 document.querySelector(".check").addEventListener("click", handleGuesses);
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        handleGuesses();
+    }
+});
 
 // Speech recognition button functionality
 const voiceInputButton = document.getElementById('voiceInputButton');

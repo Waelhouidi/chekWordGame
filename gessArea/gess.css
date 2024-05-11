@@ -7,11 +7,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #EEE;
 }
-h1{text-align: center;
-background-color: rgb(17, 131, 231);
-color: rgb(255, 255, 255);
+h1{
+    text-align: center;
+color: rgb(241, 0, 0);
 padding: 20px;
 margin: 0 0 50px ;
+font-size: 20px;
 }
 .my-game{
     width: 1000px;
@@ -196,7 +197,42 @@ background-color: #080a0a;
     z-index: 100;;
 }
 
+.header{
+        height: 80px;
+        width: 100%;
+        display: flex;
+        background-color: rgb(17, 131, 231);
+    justify-content: center;
+    ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+    
+     i{
+        font-size: 20px;
+     }
+    }
+    
+}
+#settings-div{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    color: red;
 
+    button{
+        display: block;
+        padding: 5px;
+        background-color: #04befe;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+#settings-btn ,#voiceInputButton{
+    background: none;
+    border: none;
+}
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
