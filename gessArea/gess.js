@@ -29,7 +29,7 @@ function generateInput() {
     for (let i = 1; i <= numbersOftry; i++) {
         const tryDiv = document.createElement("div");
         tryDiv.classList.add(`try-${i}`);
-        tryDiv.innerHTML = `<span>try ${i}</span>`;
+       tryDiv.innerHTML = `<span>try ${i}</span>`;
         if (i !== 1) {
             tryDiv.classList.add("disabled-inputs");
         }
