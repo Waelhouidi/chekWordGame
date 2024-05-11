@@ -63,6 +63,10 @@ getHintButton.addEventListener("click",gethint);
      handlButton.addEventListener("click",handelGeusses);
 function handelGeusses(){
   let win=true;
+  const winSound = new Audio('../img/video/videoplayback.m4a');
+  const loseSound = new Audio('../img/video/lose.m4a');
+
+
   for(let i=1;i<=numberOfinput;i++){
     const inputCarent = document.querySelector(`#guess${tryCount}-lettre${i}`);
     const letter=inputCarent.value.toLowerCase();
@@ -87,12 +91,10 @@ function handelGeusses(){
     getHintButton.classList.add('disabled-button');
 document.querySelector("#winWrapper header").innerHTML = "Congratulations!";
 document.querySelector("#winWrapper h2").innerHTML = "You win! The word is " + wordToGuess;
-document.getElementById('winWrapper').style.display = 'block';
+winSound.play();
 
-    
-    
-    
-      }else{
+document.getElementById('winWrapper').style.display = 'block';
+ }else{
         document.querySelector(`.try-${tryCount}`).classList.add("disabled-inputs");
         const currentTryInputs = document.querySelectorAll(`.try-${tryCount} input`);
         currentTryInputs.forEach((input) => ( input.disabled = true ));
@@ -108,8 +110,14 @@ document.getElementById('winWrapper').style.display = 'block';
 
         }else{
             handlButton.disabled=true;
-            message.innerHTML=`You Lose  the word is ${wordToGuess}`;
-            handlButton.classList.add("disabled-button"); 
+ document.querySelector("#winWrapper header").innerHTML = "Game Over!";
+ document.querySelector("#winWrapper h2").innerHTML = "You lose! The word was " + wordToGuess;
+ loseSound.play();
+
+             handlButton.classList.add("disabled-button"); 
+             document.getElementById('winWrapper').style.display = 'block';
+
+
 
         }
 
