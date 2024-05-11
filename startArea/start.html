@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walo game</title>
+    <link rel="stylesheet" href="./start.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="rules">
+        <h1>Rules of the game</h1>
+        <h3>Deroulement de jeu :</h3>
+        <ul>
+          <li>Le joueur dispose de 6 essais pour deviner le mot caché</li>
+          <li>
+            À chaque essai, le joueur saisit une lettre dans la grille pour
+            former un mot.
+          </li>
+          <li>
+            Après chaque essai, le jeu indique les lettres correctes placées à
+            la bonne position, les lettres correctes placées à la mauvaise
+            position et les lettres incorrectes.
+          </li>
+        </ul>
+        <h3>Fin de partie :</h3>
+
+        <ul>
+          <li>
+            La partie se termine lorsque le joueur devine correctement le mot ou
+            lorsqu'il a utilisé ses 6 essais sans succès
+          </li>
+          <li>En cas de réussite, le jeu affiche un message de victoire.</li>
+          <li>En cas d'échec, le jeu affiche le mot correct.</li>
+        </ul>
+        <button id="myButton">start</button>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function () {
+          var externalPageUrl = "../gessArea/gess.html";
+
+          window.location.href = externalPageUrl;
+        });
+    </script>
+  </body>
+</html>
