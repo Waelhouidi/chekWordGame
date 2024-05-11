@@ -84,6 +84,7 @@ function handelGeusses(){
     allTrys.forEach(tryDiv => tryDiv.classList.add("disabled-inputs"));
     handlButton.disabled=true;
     handlButton.classList.add("disabled-button"); 
+    getHintButton.classList.add('disabled-button');
 
     
     
@@ -159,6 +160,21 @@ function gethint(){
     }
 }
  
+//manage backspace
+document.addEventListener('keydown',handleBackspace);
+function handleBackspace(event) {
+    if (event.key === 'Backspace') {
+        const inputs = document.querySelectorAll('input:not([disabled])');
+        const currentIndex = Array.from(inputs).indexOf(document.activeElement);
+        if (currentIndex > 0) {
+            const currentInput = inputs[currentIndex];
+            const prevInput = inputs[currentIndex - 1];
+            currentInput.value = "";
+            prevInput.focus();
+            prevInput.value = "";
+        }
+    }
+}
 window.onload=function(){
     generateInput();
  }
