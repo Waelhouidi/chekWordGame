@@ -143,15 +143,19 @@ voiceInputButton.addEventListener('click', () => {
 
 // Function to fill input with spoken text
 function fillInputWithSpokenText(spokenText) {
-    const inputs = document.querySelectorAll('.inputs input');
-    const letters = spokenText.split('');
+    const currentTryInputs = document.querySelectorAll(`.try-${tryCount} input`);
+    const letters = spokenText.trim().toLowerCase().split(''); 
 
-    letters.forEach((letter, index) => {
-        if (inputs[index]) {
-            inputs[index].value = letter.toUpperCase();
+    currentTryInputs.forEach((input, index) => {
+        const letter = letters[index]; 
+        if (letter && /[a-zA-Z]/.test(letter)) { 
+            input.value = letter.toUpperCase();
+        } else {
+            input.value = '';
         }
     });
 }
+
 
 // Function to get hint
 function gethint() {
