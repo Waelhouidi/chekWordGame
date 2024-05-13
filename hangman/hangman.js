@@ -31,3 +31,22 @@ const gameOver = (isVictory) => {
     gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`;
     gameModal.classList.add("show");
 }
+const initGame = (button, clickedLetter) => {
+    if(currentWord.includes(clickedLetter)) {
+        [...currentWord].forEach((letter, index) => {
+            if(letter === clickedLetter) {
+                correctLetters.push(letter);
+                wordDisplay.querySelectorAll("li")[index].innerText = letter;
+                wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
+            }
+        });
+    } else {
+        wrongGuessCount++;
+        hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
+    }
+    button.disabled = true;
+    guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
+
+    if(wrongGuessCount === maxGuesses) return gameOver(false);
+    if(correctLetters.length === currentWord.length) return gameOver(true);
+}
