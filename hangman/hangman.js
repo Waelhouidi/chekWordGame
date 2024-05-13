@@ -50,3 +50,14 @@ const initGame = (button, clickedLetter) => {
     if(wrongGuessCount === maxGuesses) return gameOver(false);
     if(correctLetters.length === currentWord.length) return gameOver(true);
 }
+// Creating keyboard buttons and adding event listeners
+for (let charCode = 97; charCode <= 122; charCode++) {
+    const letter = String.fromCharCode(charCode);
+    const button = document.createElement("button");
+    button.innerText = letter;
+    keyboardDiv.appendChild(button);
+    button.addEventListener("click", () => initGame(button, letter));
+}
+
+getRandomWord();
+playAgainBtn.addEventListener("click", getRandomWord);
