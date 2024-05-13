@@ -1,8 +1,8 @@
-// Define game name and set title
+// Make title for the game 
 const gameName = "Word Game";
 document.title = gameName;
 
-// Set game name in h1 and footer
+// make name off game in h1 and footer
 document.querySelector("h1").textContent = gameName;
 document.querySelector("footer").innerHTML = `${gameName} created by Wael Houidi. Don't forget to buy me a coffee`;
 
