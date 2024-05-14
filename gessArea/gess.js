@@ -88,12 +88,15 @@ const handleGuesses = () => {
         document.querySelector(".check").classList.add("disabled-button");
         document.querySelector(".help").classList.add('disabled-button');
         document.querySelector("#winWrapper header").innerHTML = "Congratulations!";
+        document.querySelector("#winWrapper img").src = "../img/video/game-gaming.gif";
         document.querySelector("#winWrapper h2").innerHTML = `You win! The word is ${wordToGuess}`;
         winSound.play();
         document.getElementById('winWrapper').style.display = 'block';
     } else {
         document.querySelector(`.try-${tryCount}`).classList.add("disabled-inputs");
         const currentTryInputs = document.querySelectorAll(`.try-${tryCount} input`);
+        document.querySelector("#winWrapper img").src = "../img/video/los.gif";
+
         currentTryInputs.forEach((input) => (input.disabled = true));
 
         tryCount++;
