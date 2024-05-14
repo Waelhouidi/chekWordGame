@@ -12,7 +12,7 @@ const maxGuesses = 6;
 const resetGame = () => {
     correctLetters = [];
     wrongGuessCount = 0;
-    hangmanImage.src = "images/hangman-0.svg";
+    hangmanImage.src = "../img/video/hangman-0.svg";
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
     wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join("");
     keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
@@ -42,7 +42,7 @@ const initGame = (button, clickedLetter) => {
         });
     } else {
         wrongGuessCount++;
-        hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
+        hangmanImage.src = `../img/video/hangman-${wrongGuessCount}.svg`;
     }
     button.disabled = true;
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;

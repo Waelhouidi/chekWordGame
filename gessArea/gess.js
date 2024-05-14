@@ -192,12 +192,19 @@ function handleBackspace(event) {
         if (currentIndex > 0) {
             const currentInput = inputs[currentIndex];
             const prevInput = inputs[currentIndex - 1];
+            console.log("Clearing current input");
+
             currentInput.value = "";
+            console.log("Focusing previous input");
+
             prevInput.focus();
+            console.log("Clearing previous input");
+
             prevInput.value = "";
         }
     }
 }
+document.addEventListener("keydown",handleBackspace)
 
 // Event listener for backspace key
 const menuBtn = document.querySelector("#settings-btn"); // Corrected the class name
