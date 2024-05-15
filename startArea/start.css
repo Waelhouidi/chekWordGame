@@ -16,6 +16,7 @@
     flex-direction: column; /* Added to stack items vertically */
 }
 
+
 html, body {
     margin: 0;
     padding: 0;

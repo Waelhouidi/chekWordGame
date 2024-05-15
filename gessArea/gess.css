@@ -64,6 +64,8 @@ margin: bottom 20px;
     }    
     }
     .key-colors{
+      
+
         .key-color
         {
             display: flex;
@@ -118,6 +120,15 @@ footer{
     left: 0;
     padding: 20px;
    
+}
+.restart{
+    color: #f8f8f8;
+    background-color: #5E63BA;
+    border-radius: 10px;
+    &:hover{
+        transform: scale(1.1);
+    }
+
 }
 .help{
     width: 100px;
@@ -249,7 +260,7 @@ background-color: #080a0a;
 
 }
 /* Media Queries */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .my-game {
         padding: 10px;
     }

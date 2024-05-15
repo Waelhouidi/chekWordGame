@@ -50,13 +50,18 @@ function generateInput() {
 
     const inputs = document.querySelectorAll(".inputs input");
     inputs.forEach((input, index) => {
-        input.addEventListener("input", function () {
-            this.value = this.value.toUpperCase();
-            const nextInput = inputs[index + 1];
-            if (nextInput) nextInput.focus();
-            
+        input.addEventListener("input", function (event) {
+            const inputValue = event.data || ''; // Input value or empty string if backspace/delete
+            if (!/^[a-zA-Z]+$/.test(inputValue)) {
+                // If the input value is not an alphabet character, clear it
+                this.value = '';
+            } else {
+                // Convert input to uppercase
+                this.value = inputValue.toUpperCase();
+                const nextInput = inputs[index + 1];
+                if (nextInput) nextInput.focus();
+            }
         });
-  
     });
 }
 
@@ -197,13 +202,10 @@ function handleBackspace(event) {
         if (currentIndex > 0) {
             const currentInput = inputs[currentIndex];
             const prevInput = inputs[currentIndex - 1];
-            console.log("Clearing current input");
 
             currentInput.value = "";
-            console.log("Focusing previous input");
 
             prevInput.focus();
-            console.log("Clearing previous input");
 
             prevInput.value = "";
         }
