@@ -112,7 +112,7 @@ footer{
     text-align: center;
     width: 100%;
     color: #f8f8f8;
-    background-color: rgb(17, 131, 231);
+    background-color: #5E63BA;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -201,8 +201,8 @@ background-color: #080a0a;
         height: 80px;
         width: 100%;
         display: flex;
-        background-color: rgb(17, 131, 231);
-    justify-content: center;
+        background-color: #5E63BA;
+        justify-content: center;
     ul{
         display: flex;
         list-style: none;

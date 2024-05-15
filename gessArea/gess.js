@@ -54,7 +54,9 @@ function generateInput() {
             this.value = this.value.toUpperCase();
             const nextInput = inputs[index + 1];
             if (nextInput) nextInput.focus();
+            
         });
+  
     });
 }
 
@@ -229,60 +231,4 @@ restartBtn.addEventListener('click',()=>{
 window.onload = function () {
     generateInput();
 };
- // Translations object
- const translations = {
-    en: {
-        gameName: "Word Game",
-        createdBy: "created by Wael Houidi. Don't forget to buy me a coffee",
-        rules: {
-            gamePlay: "Game play:",
-            endOfGame: "End of Game:",
-            attempts: "The player has 6 attempts to guess the hidden word",
-            attemptDescription: "On each attempt, the player enters a letter in the grid to form a word",
-            attemptFeedback: "After each attempt, the game indicates the correct letters placed in the right position, the correct letters placed in the wrong position, and the incorrect letters",
-            gameEnds: "The game ends when the player correctly guesses the word or when they have used all 6 attempts without success",
-            victoryMessage: "Upon success, the game displays a victory message.",
-            failureMessage: "Upon failure, the game displays the correct word."
-        }
-    },
-    fr: {
-        gameName: "Jeu de mots",
-        createdBy: "créé par Wael Houidi. N'oubliez pas de m'acheter un café",
-        rules: {
-            gamePlay: "Jouabilité :",
-            endOfGame: "Fin du jeu :",
-            attempts: "Le joueur a 6 essais pour deviner le mot caché",
-            attemptDescription: "À chaque tentative, le joueur entre une lettre dans la grille pour former un mot",
-            attemptFeedback: "Après chaque tentative, le jeu indique les lettres correctes placées à la bonne position, les lettres correctes placées à la mauvaise position et les lettres incorrectes",
-            gameEnds: "Le jeu se termine lorsque le joueur devine correctement le mot ou lorsqu'il a utilisé tous ses 6 essais sans succès",
-            victoryMessage: "En cas de succès, le jeu affiche un message de victoire.",
-            failureMessage: "En cas d'échec, le jeu affiche le mot correct."
-        }
-    }
-};
 
-// Function to change language
-function changeLanguage(selectedLanguage) {
-    document.title = translations[selectedLanguage].gameName;
-    document.querySelector("h1").textContent = translations[selectedLanguage].gameName;
-    document.querySelector("footer").innerHTML = translations[selectedLanguage].createdBy;
-
-    document.querySelector("#stg-ing h1").textContent = translations[selectedLanguage].rules.gamePlay;
-    document.querySelector("#stg-ing ol li:nth-child(1)").textContent = translations[selectedLanguage].rules.attempts;
-    document.querySelector("#stg-ing ol li:nth-child(2)").textContent = translations[selectedLanguage].rules.attemptDescription;
-    document.querySelector("#stg-ing ol li:nth-child(3)").textContent = translations[selectedLanguage].rules.attemptFeedback;
-
-    document.querySelector("#stg-ing h3").textContent = translations[selectedLanguage].rules.endOfGame;
-    document.querySelector("#stg-ing ol li:nth-child(4)").textContent = translations[selectedLanguage].rules.gameEnds;
-    document.querySelector("#stg-ing ol li:nth-child(5)").textContent = translations[selectedLanguage].rules.victoryMessage;
-    document.querySelector("#stg-ing ol li:nth-child(6)").textContent = translations[selectedLanguage].rules.failureMessage;
-}
-
-// Event listener for language select change
-document.getElementById('language-select').addEventListener('change', function() {
-    const selectedLanguage = this.value;
-    changeLanguage(selectedLanguage);
-});
-
-// Initially set the language based on the default selection
-changeLanguage(document.getElementById('language-select').value);
