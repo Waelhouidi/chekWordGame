@@ -70,9 +70,10 @@ margin: bottom 20px;
     .key-colors{
       margin-top: 150px;
       margin-right: 10px;
-
-        .key-color
-        {
+      
+      .key-color
+      {
+            border-radius: 4px;
             display: flex;
             align-items: center;
             padding: 15px;
