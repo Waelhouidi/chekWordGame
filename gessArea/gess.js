@@ -20,6 +20,17 @@ const numberOfinput = 5;
 let tryCount = 1;
 let numberOfHints = 2;
 
+//score
+let score = localStorage.getItem('score') ? parseInt(localStorage.getItem('score')) : 0;
+document.querySelector('#score-ing p').textContent = score;
+//reset score 
+function resetScore() {
+    score = 0;
+    localStorage.setItem('score', score);
+    document.querySelector('#score-ing p').textContent = score;
+};
+document.querySelector("#reset-score-btn").addEventListener("click", resetScore);
+
 // Initialize hints display
 document.querySelector('.help span').textContent = numberOfHints;
 
@@ -100,6 +111,9 @@ const handleGuesses = () => {
         document.querySelector("#winWrapper h2").innerHTML = `You win! The word is ${wordToGuess}`;
         winSound.play();
         document.getElementById('winWrapper').style.display = 'block';
+        score++;
+        localStorage.setItem('score', score);
+        document.querySelector('#score-ing p').textContent = score;
     } else {
         document.querySelector(`.try-${tryCount}`).classList.add("disabled-inputs");
         const currentTryInputs = document.querySelectorAll(`.try-${tryCount} input`);
@@ -112,6 +126,7 @@ const handleGuesses = () => {
         const nextTryInputs = document.querySelectorAll(`.try-${tryCount} input`);
         nextTryInputs.forEach((input) => {
             input.disabled = false;
+            
         });
 
         let el = document.querySelector(`.try-${tryCount} `);
@@ -215,7 +230,7 @@ function handleBackspace(event) {
 document.addEventListener("keydown",handleBackspace)
 
 // Event listener for backspace key
-const menuBtn = document.querySelector("#settings-btn"); // Corrected the class name
+const menuBtn = document.querySelector("#settings-btn"); 
 menuBtn.addEventListener("click", () => {
     document.querySelector("#stg-ing").style.display = "block";
 });
@@ -229,6 +244,15 @@ const restartBtn = document.querySelector(".restart");
 restartBtn.addEventListener('click',()=>{
     window.location.reload();
 });
+//score button
+const btnScore=document.querySelector("#score");
+btnScore.addEventListener('click',()=>{
+    document.querySelector("#score-ing").style.display="block";
+});
+//close score button
+function cl(){
+    document.querySelector("#score-ing").style.display="none";
+}
 const translations = {
     en: {
         title: "Word Game",

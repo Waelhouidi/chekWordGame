@@ -63,8 +63,10 @@ margin: bottom 20px;
         }
     }    
     }
+   
     .key-colors{
-      
+      margin-top: 150px;
+      margin-right: 10px;
 
         .key-color
         {
@@ -94,22 +96,7 @@ margin: bottom 20px;
         }
     }
 }
-.message{
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-    span{
-        color: violet; 
-        font-weight: bold;
-        display: block;
-        font-size: 50px;
-        text-transform: capitalize;
-        margin-top: 10px;
-    }
-    p{
-        margin-top: 15px;
-    }
-}
+
 footer{
     text-align: center;
     width: 100%;
@@ -207,6 +194,19 @@ background-color: #080a0a;
     text-align: center;
     z-index: 100;;
 }
+.score{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 100;;
+}
 
 .header{
         height: 80px;
@@ -240,7 +240,7 @@ background-color: #080a0a;
         cursor: pointer;
     }
 }
-#settings-btn ,#voiceInputButton{
+#settings-btn ,#voiceInputButton,#score{
     background: none;
     border: none;
 }

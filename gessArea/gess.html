@@ -29,6 +29,13 @@
         </div>
 
         <button id="voiceInputButton"> <i class="fa-solid fa-microphone"></i> </button>
+        <button id="score"><i class="fa-solid fa-square-poll-horizontal"></i></button>
+        <div class="score" id="score-ing" style="display: none;">
+            <button onclick="cl()" id="#close-score-btn">X</button>
+            <h4>Your score </h4>
+            <p>2</p>
+            <button id="reset-score-btn">Reset Score</button>
+        </div>
     </header>
     <div class="my-game">
         <div class="game-area">
@@ -45,7 +52,7 @@
             <h2 id="win-message"></h2>
             <button class="restart" id="restart-btn"></button>
         </div>
-
+ 
         <div class="key-colors">
             <h2 id="key-color-title"></h2>
             <div class="key-color">
