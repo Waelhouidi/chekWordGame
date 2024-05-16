@@ -23,13 +23,6 @@ let numberOfHints = 2;
 //score
 let score = localStorage.getItem('score') ? parseInt(localStorage.getItem('score')) : 0;
 document.querySelector('#score-ing p').textContent = score;
-//reset score 
-function resetScore() {
-    score = 0;
-    localStorage.setItem('score', score);
-    document.querySelector('#score-ing p').textContent = score;
-};
-document.querySelector("#reset-score-btn").addEventListener("click", resetScore);
 
 // Initialize hints display
 document.querySelector('.help span').textContent = numberOfHints;
@@ -252,7 +245,63 @@ btnScore.addEventListener('click',()=>{
 //close score button
 function cl(){
     document.querySelector("#score-ing").style.display="none";
+};
+// Function to reset score
+function resetScore() {
+    score = 0;
+    localStorage.setItem('score', score);
+    document.querySelector('#score-ing p').textContent = score;
 }
+
+// Event listener for reset score button
+document.querySelector("#reset-score-btn").addEventListener("click", resetScore);
+/*
+function changeBackgroundImage() {
+    const body = document.body;
+    const images = ['../img/video/day.jpg', '../img/video/cityskyline.png']; // Array of background images
+
+    let index = 0;
+
+    // Function to change the background image
+    function setBackgroundImage() {
+        body.style.backgroundImage = `url(${images[index]})`;
+        index = (index + 1) % images.length;
+    }
+
+    // Set the initial background image
+    setBackgroundImage();
+
+    // Change the background image every 1 minute
+    setInterval(setBackgroundImage, 10000); // 60000 milliseconds = 1 minute
+}
+
+// Call the function to start changing the background image
+changeBackgroundImage();/*
+/*
+// Function to set background image based on time
+function setBackgroundImage() {
+    const date = new Date();
+    const hours = date.getHours();
+
+    // Get the body element
+    const body = document.body;
+
+    // Define day and night hours (you can adjust these as needed)
+    const dayStartHour = 6; // 6 AM
+    const nightStartHour = 18; // 6 PM
+
+    // Set background image based on time
+    if (hours >= dayStartHour && hours < nightStartHour) {
+        body.style.backgroundImage = 'url(../img/video/day.png)'; // Replace 'day.jpg' with your day background image
+    } else {
+        body.style.backgroundImage = 'url(../img/video/cityskyline.png)'; // Replace 'night.jpg' with your night background image
+    }
+}
+
+// Call setBackgroundImage function when the window loads
+window.onload = setBackgroundImage;*/
+
+
 const translations = {
     en: {
         title: "Word Game",
