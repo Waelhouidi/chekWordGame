@@ -30,11 +30,27 @@ html, body {
     width: 100%;
     border-left: 1px solid;
     border-right: 1px solid;
+
 }
 
 h1 {
-    margin-bottom: 20px; /* Added some space below the heading */
+    margin-bottom: 20px; 
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    animation: fadeInOut 2s infinite;
 }
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 .games {
     display: flex;
