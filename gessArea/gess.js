@@ -255,6 +255,8 @@ function resetScore() {
 
 // Event listener for reset score button
 document.querySelector("#reset-score-btn").addEventListener("click", resetScore);
+
+
 /*
 function changeBackgroundImage() {
     const body = document.body;
@@ -327,7 +329,10 @@ const translations = {
         checkWord: "Check Word",
         hint: "Hint",
         restartBtn: "Restart",
+        yourScore:"your score",
         foot:`${gameName} created by Wael Houidi. `,
+        resetBtn:"reset score"
+
     },
     fr: {
         title: "Jeu de mots",
@@ -345,6 +350,8 @@ const translations = {
 <li>En cas de succès, le jeu affiche un message de victoire.</li>
 <li>En cas d'échec, le jeu affiche le mot correct.</li>
 </ol>`,
+yourScore:"ton resultat",
+
         victoryMessage: "Vous avez gagné, le mot est",
         gameOverMessage: "Partie terminée !",
         correctText: "correct",
@@ -354,6 +361,7 @@ const translations = {
         hint: "Indice",
         restartBtn: "Recommencer",
         foot:`${gameName} cree par Wael Houidi. `,
+        resetBtn:"mettre a zero"
 
     }
 };
@@ -374,6 +382,8 @@ const elementsToUpdate = {
     wrongText: document.getElementById("wrong-text"),
     checkWord: document.getElementById("check-word"),
     hint: document.getElementById("hint"),
+    yourScore:document.querySelector('.yourScore'),
+    resetBtn:document.getElementById("reset-score-btn"),
     restartBtn: document.getElementById("restart-btn"),
     foot: document.querySelector("footer")  
 
