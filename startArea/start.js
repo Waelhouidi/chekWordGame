@@ -6,10 +6,10 @@
   }
 
   hangmanImg.addEventListener('click', function() {
-    goToGame('../hangman/hangman.html');
+    goToGame('../hangman.html');
   });
 
   wordlImg.addEventListener('click', function() {
-    goToGame('../gessArea/gess.html');
+    goToGame('../gess.html');
   });
 
