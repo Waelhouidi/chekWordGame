@@ -1,107 +1,120 @@
-*{
- box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
-body{
-      background-image: url(../img//video/cityskyline.png);
+
+body {
+    background-image: url(../img/video/cityskyline.png);
     background-size: cover;
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #EEE;
 }
-h1{
+
+h1 {
     text-align: center;
-color: rgb(234, 220, 220);
-padding: 20px;
-margin: 0 0 50px ;
-font-size: 20px;
+    color: rgb(234, 220, 220);
+    padding: 20px;
+    margin: 0 0 50px;
+    font-size: 20px;
 }
-.my-game{
-  
+
+.my-game {
     width: 1000px;
     text-align: center;
     display: flex;
     align-items: start;
     justify-content: space-between;
     margin: 20px auto;
-    .game-area{
-        .inputs{
-            >div{
-display: flex;
-justify-content: center;
-align-items: center;
-margin: bottom 20px;  
-         span{
-            margin-right: 15px;
-            font-size: 30px;
-            font-weight: bold;
-         } 
-}
-    .disabled-inputs{
-        opacity: 0.6;
-        pointer-events: none;
-        }
-        input{
-            border: none;
-            border-bottom: 3px solid #333;
-            height: 60px;
-            width: 60px;
-            margin: 5px;
-            caret-color: rgb(255, 0, 0);
-            text-align: center;
-            font-size: 50px;
-            &:focus{
-                outline-color: rgb(46, 44, 44);
-            }
-            &.correct{
-                background-color: green ;
-                color: white;
-               }
-               &.false-place{
-                background-color: orange;
-                color: white;
-               }
-               &.wrong{background-color: red;
-                color: white;}
-        }
-    }    
-    }
-   
-    .key-colors{
-      margin-top: 150px;
-      margin-right: 10px;
-      
-      .key-color
-      {
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            margin-bottom: 10px;
-            background-color: rgb(255, 255, 255);
-            .key{
-              width: 30px;
-              height: 30px;
-              border-radius: 50%;
-              margin-right: 10px;
-               &.correct{
-                background-color: green ;
-               }
-               &.false-place{
-                background-color: orange;
-               }
-               &.wrong{background-color: red;}
-            
-            }
-            .key-text{
-                font-size: 20px;
-            font-weight: bold;
-            }
-        }
-    }
 }
 
-footer{
+.game-area .inputs > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inputs span {
+    margin-right: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.disabled-inputs {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputs input {
+    border: none;
+    border-bottom: 3px solid #333;
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    caret-color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 50px;
+}
+
+.inputs input:focus {
+    outline-color: rgb(46, 44, 44);
+}
+
+.inputs input.correct {
+    background-color: green;
+    color: white;
+}
+
+.inputs input.false-place {
+    background-color: orange;
+    color: white;
+}
+
+.inputs input.wrong {
+    background-color: red;
+    color: white;
+}
+
+.key-colors {
+    margin-top: 150px;
+    margin-right: 10px;
+}
+
+.key-color {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.key-color .key {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.key-color .key.correct {
+    background-color: green;
+}
+
+.key-color .key.false-place {
+    background-color: orange;
+}
+
+.key-color .key.wrong {
+    background-color: red;
+}
+
+.key-color .key-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
     text-align: center;
     width: 100%;
     color: #f8f8f8;
@@ -110,18 +123,19 @@ footer{
     bottom: 0;
     left: 0;
     padding: 20px;
-   
 }
-.restart{
+
+.restart {
     color: #f8f8f8;
     background-color: #5E63BA;
     border-radius: 10px;
-    &:hover{
-        transform: scale(1.1);
-    }
-
 }
-.help{
+
+.restart:hover {
+    transform: scale(1.1);
+}
+
+.help {
     width: 100px;
     font-size: 16px;
     font-weight: 600;
@@ -129,24 +143,23 @@ footer{
     cursor: pointer;
     margin: 20px;
     height: 55px;
-    text-align:center;
+    text-align: center;
     border: none;
     background-size: 300% 100%;
     border-radius: 50px;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    &:hover{
-background-color: #080a0a;     
-   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-    }
-    }
+}
+
+.help:hover {
+    background-color: #080a0a;
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
 
 .buttons {
     margin: 10%;
     text-align: center;
 }
+
 .btn-hover {
     width: 150px;
     font-size: 16px;
@@ -155,100 +168,32 @@ background-color: #080a0a;
     cursor: pointer;
     margin: 20px;
     height: 55px;
-    text-align:center;
+    text-align: center;
     border: none;
     background-size: 300% 100%;
-
     border-radius: 50px;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
+
 .btn-hover:hover {
     background-position: 100% 0;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
 }
 
 .btn-hover:focus {
     outline: none;
 }
+
 .btn-hover.color-9 {
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
+
 .disabled-button {
     opacity: 0.6;
     pointer-events: none;
-    
-}
-.wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    background: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    z-index: 100;;
-}
-.score{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    background: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    z-index: 100;;
 }
 
-.header{
-        height: 80px;
-        width: 100%;
-        display: flex;
-        background-color: #5E63BA;
-        justify-content: center;
-    ul{
-        display: flex;
-        list-style: none;
-        align-items: center;
-    
-     i{
-        font-size: 20px;
-     }
-    }
-    
-}
-#settings-div{
-    display: flex;
-    align-items: center;
-    margin-top: 2%;
-    color: red;
-
-    button{
-        display: block;
-        padding: 5px;
-        background-color: #04befe;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-}
-#settings-btn ,#voiceInputButton,#score{
-    background: none;
-    border: none;
-}
-.stg{
+.wrapper, .score, .stg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -260,13 +205,63 @@ background-color: #080a0a;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     z-index: 100;
-
-
 }
+
+.header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    background-color: #5E63BA;
+    justify-content: center;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.header ul i {
+    font-size: 20px;
+}
+
+#settings-div {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    color: red;
+}
+
+#settings-div button {
+    display: block;
+    padding: 5px;
+    background-color: #04befe;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#settings-btn, #voiceInputButton, #score {
+    background: none;
+    border: none;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 600px) {
     .my-game {
+        width: 100%;
         padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-area {
+        width: 100%;
+    }
+
+    .inputs {
+        width: 100%;
+        justify-content: center;
     }
 
     .inputs > div {
@@ -278,6 +273,10 @@ background-color: #080a0a;
         height: 40px;
         font-size: 24px;
         margin: 5px;
+    }
+
+    .key-colors {
+        display: none;
     }
 
     .btn-hover {
@@ -295,3 +294,20 @@ background-color: #080a0a;
     }
 }
 
+.wrapper {
+    width: 90%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.score {
+    width: 90%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stg {
+    width: 90%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
