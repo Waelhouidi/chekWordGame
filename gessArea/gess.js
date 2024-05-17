@@ -278,7 +278,8 @@ function changeBackgroundImage() {
 }
 
 // Call the function to start changing the background image
-changeBackgroundImage();/*
+changeBackgroundImage();*/
+
 /*
 // Function to set background image based on time
 function setBackgroundImage() {
